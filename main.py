@@ -83,4 +83,5 @@ if st.button("Calcular produtos da reação 🖩"):
     #     st.warning(alerta_entalpia)
     st.markdown("---")
 
-    st.warning("⚠️  Atenção! Esta mistura pode ser perigosa.")
+    if not reaction.get("segura", True):
+    st.warning("⚠️ Atenção! Esta mistura pode ser perigosa.")
